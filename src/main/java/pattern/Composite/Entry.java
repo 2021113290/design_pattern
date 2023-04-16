@@ -1,0 +1,25 @@
+package pattern.Composite;
+
+/**
+ * Created with IntelliJ IDEA.
+ * Description:
+ * User: xinyu
+ * Date: 2023-04-15
+ * Time: 16:37
+ */
+public abstract class Entry {
+    public abstract String getName();
+    public abstract int getSize();
+    public Entry add(Entry entry)throws FileTreatmentException{
+        throw new FileTreatmentException();
+    }
+    public void printList(){
+        printList("");
+    }
+    protected abstract void printList(String prefix);
+
+    @Override
+    public String toString() {
+        return getName()+"("+getSize()+")";
+    }
+}
